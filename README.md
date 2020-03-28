@@ -1,6 +1,14 @@
 # CI/CD node + netlify base image
 
+## Image
+
+```bash
+docker pull piotrgiedziun/node-netlify:13-stretch-slim
+```
+
 ## Gitlab CI/CD
+
+Dynamic Reviews App for gitlab.com
 
 ```yaml
 stages:
@@ -8,7 +16,7 @@ stages:
 
 review:
   stage: deploy
-  image: node:13-stretch-slim
+  image: piotrgiedziun/node-netlify:13-stretch-slim
   script:
     - yarn install
     - yarn build
